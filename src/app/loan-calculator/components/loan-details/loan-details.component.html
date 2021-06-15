@@ -1,0 +1,32 @@
+<div class="loan-details">
+    <span class="loan-details-txt">Taarifa za Mkopo</span>
+    <div class="d-flex w-100">
+        <div class="sliders p-5 w-100 d-flex flex-column justify-content-center">
+            <div class="w-100">
+                <p class="title-txt">Mkopo</p>
+                <mat-slider (input)="onLoanInputChange($event)" *ngIf="(customer$ | async) as customer" min="0" max="{{customer.loan.loanAmount}}" step="{{loanAmountValue / 50}}" value="{{loanAmountValue}}" class="w-100" aria-label="unit(s)"></mat-slider>
+            </div>
+            <div class="w-100">
+                <p class="title-txt">Muda</p>
+                <mat-slider (input)="onDurationInputChange($event)" *ngIf="(customer$ | async) as customer" min="12" max="84" step="12" value="12" class="w-100" aria-label="unit(s)"></mat-slider>
+            </div>
+        </div>
+
+        <div class="details p-5 w-100">
+            <div class="w-100" >
+                <p class="title-txt">Kiasi cha Mkopo</p>
+                <p class="value" *ngIf="(customer$ | async) as customer">TSH {{loanAmountValue | number:'1.1-3'}}</p>
+            </div>
+            <div class="w-100">
+                <p class="title-txt">Muda</p>
+                <p class="value"*ngIf="(customer$ | async) as customer">Miezi {{customer.loan.durationInMonths}}</p>
+            </div>
+            <div class="w-100">
+                <p class="title-txt">Malipo kwa Mwezi</p>
+                <p class="value"*ngIf="(customer$ | async) as customer">TSH {{(loanAmountValue/ customer.loan.durationInMonths ) | number:'1.1-3' }}</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+

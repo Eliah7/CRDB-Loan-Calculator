@@ -1,0 +1,53 @@
+.personal-details {
+  height: max-content;
+  padding: 1%;
+  background: #242625;
+  box-shadow: 0px 10px 20px #519a32;
+  border-radius: 16px;
+}
+
+.personal-details-txt {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 41px;
+  /* or 89% */
+
+  letter-spacing: 0.374px;
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+mat-form-field.mat-form-field {
+  width: min-content;
+  /* height: 80%; */
+  /* height: 71.5px; */
+  color: white; /*#1a1c1b;*/
+  text-emphasis-color: white;
+  background: #1a1c1b;
+  border: 1px solid #151515;
+  box-sizing: border-box;
+  box-shadow: inset 2px 2px 4px rgba(215, 215, 215, 0.25),
+    inset -2px -2px 4px rgba(215, 215, 215, 0.25);
+  border-radius: 15px;
+}
+
+.input-title-txt {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  /* line-height: 41px; */
+  /* or 164% */
+
+  letter-spacing: 0.374px;
+
+  color: #c8c9c8;
+}
+
+.btn-submit {
+  height: 8vh;
+  filter: drop-shadow(0px 4px 8px #5ea93d);
+  border-radius: 7px;
+}

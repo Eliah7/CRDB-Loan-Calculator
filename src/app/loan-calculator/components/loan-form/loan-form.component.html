@@ -1,0 +1,20 @@
+<div class="loan-form">
+    <app-header></app-header>
+    <div class="loan-form-container" *ngIf="requestIsValid$ | async">
+        <div class="d-flex align-items-center">
+            <span class="">
+                <mat-icon class="info-icon">info_outlined</mat-icon>
+            </span>
+            <span class="info-txt p-2">Taarifa za Mkopo.</span>
+        </div>
+        <app-loan-details></app-loan-details>
+    </div>
+    <div class="loan-form-container">
+        <div class="d-flex align-items-center">
+            <span class=""><mat-icon class="info-icon">info_outlined</mat-icon></span>
+            <span class="info-txt p-2">Tafadhali ingiza taarifa zako hapa ujua kiasi cha mkopo unaoweza kupata.</span>
+        </div>
+    <app-personal-details-form></app-personal-details-form>
+    </div>
+    
+</div>

@@ -1,0 +1,65 @@
+<div class="personal-details">
+    <span class="personal-details-txt">Taarifa Binafsi</span>
+    <div>
+        <form
+         [formGroup]="loanDetailsForm"
+        >
+        <div class="d-flex w-100">
+            <div class="p-5 w-100">
+            <div class="w-100">
+                <p class="input-title-txt">Mshahara Wako</p>
+                <mat-form-field class="w-100">
+                    <!-- <mat-label>Mshahara Wako</mat-label> -->
+                    <input class="w-100" type="number" matInput formControlName="grossSalary" />
+                    <mat-error>Mshahara wako ni lazima</mat-error>
+                </mat-form-field>
+            </div>
+            <div>
+                <p class="input-title-txt">Net Pay</p>
+                <mat-form-field class="w-100">
+                    <!-- <mat-label>Net Pay</mat-label> -->
+                    <input matInput type="number" formControlName="netPay" />
+                    <mat-error>Net Pay ni lazima</mat-error>
+                </mat-form-field>
+            </div>
+            <div>
+                <p class="input-title-txt">Jina la Muajiri</p>
+                <mat-form-field class="w-100">
+                    <!-- <mat-label>Mikopo mingine</mat-label> -->
+                    <input matInput formControlName="employer" />
+                    <mat-error>Jina la Muajiri ni lazima</mat-error>
+                </mat-form-field>
+            </div>
+            </div>
+            <div class="p-5 w-100 d-flex flex-column justify-content-between">
+                <div>
+                    <div>
+                        <p class="input-title-txt">Muda wa kulipa mkopo</p>
+                        <mat-form-field class="w-100">
+                            <!-- <mat-label>Mshahara Wako</mat-label> -->
+                            <select matNativeControl value="12" formControlName="durationInMonths"required>
+                                <option value="{{duration}}" *ngFor="let duration of durations">{{duration}}</option>
+                            </select>
+                            <mat-error>Mshahara wako ni lazima</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <p class="input-title-txt">Mikopo mingine(CRDB)</p>
+                        <mat-form-field class="w-100">
+                            <!-- <mat-label>Mikopo mingine</mat-label> -->
+                            <input matInput  type="number" formControlName="crdbInstallments" />
+                            <mat-error>Mikopo mingine ni lazima</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div>
+                    <button class="w-100 btn-submit" mat-raised-button color="accent" (click)="calculateLoanDetails()">PIGA HESABU</button>
+                    
+                </div>
+            </div>
+        </div>
+
+        </form>
+        
+    </div>
+</div>

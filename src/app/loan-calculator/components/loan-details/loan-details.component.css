@@ -1,0 +1,56 @@
+.loan-details {
+  height: max-content;
+  padding: 1%;
+  background: #242625;
+  box-shadow: 0px 10px 20px #519a32;
+  border-radius: 16px;
+}
+
+.loan-details-txt {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 41px;
+  /* or 89% */
+
+  letter-spacing: 0.374px;
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.sliders {
+}
+
+.details {
+}
+
+.title-txt {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  /* line-height: 41px; */
+  /* or 164% */
+
+  letter-spacing: 0.374px;
+
+  color: #c8c9c8;
+}
+
+.value {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 49px;
+  /* or 70% */
+
+  letter-spacing: 0.374px;
+
+  color: #5ea93d;
+}
+
+mat-slider {
+  filter: drop-shadow(1px 1px 2px #5ea93d);
+}
