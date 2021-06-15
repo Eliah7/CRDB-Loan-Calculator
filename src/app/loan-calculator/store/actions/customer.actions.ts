@@ -13,6 +13,10 @@ export const loanDetailSuccess = createAction(
   props<{ customer: Customer; loan: Loan }>()
 );
 
+export const noLoanAvailable = createAction(
+  enums.CustomerActionsEnums.NO_LOAN_AVAILABLE
+);
+
 export const removeAllCustomers = createAction(
   enums.CustomerActionsEnums.REMOVE_ALL_CUSTOMERS
 );

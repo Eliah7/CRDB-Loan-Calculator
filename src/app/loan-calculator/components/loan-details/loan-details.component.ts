@@ -58,7 +58,7 @@ export class LoanDetailsComponent implements OnInit {
   }
 
   onDurationInputChange(event: MatSliderChange) {
-    console.log(this.customerDefault);
+    // console.log(this.customerDefault);
     let durationInMonths = event.value;
     let customerWithUpdatedDuration = {
       ...this.customerDefault,
@@ -67,5 +67,13 @@ export class LoanDetailsComponent implements OnInit {
     this.store.dispatch(
       fromStore.REQUEST_LOAN_DETAILS({ customer: customerWithUpdatedDuration })
     );
+  }
+
+  formatLabel(value: number) {
+    if (value >= 1000) {
+      return Math.round(value / 1000) + 'k';
+    }
+
+    return value;
   }
 }

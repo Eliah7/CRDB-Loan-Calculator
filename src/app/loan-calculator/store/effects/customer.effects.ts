@@ -22,17 +22,22 @@ export class CustomerEffects {
     this.actions$.pipe(
       ofType(fromEnums.CustomerActionsEnums.REQUEST_LOAN_DETAILS),
       //   tap((action) => console.log(action)),
-      //   tap(() => this.store.dispatch(fromActions.removeAllCustomers())),
+      tap(() => this.store.dispatch(fromActions.removeAllCustomers())),
       switchMap((action) =>
         this.loanCalculatorService
           .caluculatorLoanDetailsFromCustomerInfo(action['customer'])
           .pipe(
             map(
-              (loan) =>
-                fromActions.loanDetailSuccess({
-                  customer: action['customer'],
-                  loan,
-                }),
+              (loan) => {
+                if (loan.loanAmount > 0) {
+                  return fromActions.loanDetailSuccess({
+                    customer: action['customer'],
+                    loan,
+                  });
+                } else {
+                  return fromActions.noLoanAvailable();
+                }
+              },
               catchError((error) =>
                 of(fromActions.requestLoanDetailsFail({ error }))
               )

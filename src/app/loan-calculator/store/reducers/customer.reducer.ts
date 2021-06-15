@@ -26,6 +26,9 @@ export const customerReducer = createReducer(
   ),
   on(actions.removeAllCustomers, (state: states.CustomerState) => {
     return customerAdapter.removeAll({ ...state, loading: true });
+  }),
+  on(actions.noLoanAvailable, (state: states.CustomerState) => {
+    return { ...state, requestIsValid: false };
   })
 );
 

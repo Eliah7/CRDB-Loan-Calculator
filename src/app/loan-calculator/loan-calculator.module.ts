@@ -6,6 +6,7 @@ import { StoreModule } from '@ngrx/store';
 import { customerReducer, reducers } from './store/reducers';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
@@ -20,6 +21,7 @@ import { CommonModule } from '@angular/common';
 import { LoanDetailsComponent } from './components/loan-details/loan-details.component';
 import { EffectsModule } from '@ngrx/effects';
 import { effects } from './store/effects';
+import { ErrorDetailsComponent } from './components/error-details/error-details.component';
 
 export const ROUTES: Routes = [{ path: '', component: LoanFormComponent }];
 const materialModules = [
@@ -32,6 +34,7 @@ const materialModules = [
   MatFormFieldModule,
   MatCardModule,
   MatSliderModule,
+  MatDialogModule,
   // BrowserAnimationsModule,
 ];
 
@@ -48,6 +51,7 @@ const materialModules = [
     LoanFormComponent,
     PersonalDetailsFormComponent,
     LoanDetailsComponent,
+    ErrorDetailsComponent,
   ],
 })
 export class LoanCalculatorModule {}
