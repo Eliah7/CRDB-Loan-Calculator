@@ -18,6 +18,7 @@ import { DROP_ANIMATION } from '../loan-details/loan-details.component';
 export class PersonalDetailsFormComponent implements OnInit {
   loanDetailsForm: FormGroup;
   durations = [12, 24, 36, 48, 60, 72, 84];
+  requestIsValid$: Observable<boolean>;
 
   constructor(
     private readonly formBuilder: FormBuilder,
@@ -32,6 +33,10 @@ export class PersonalDetailsFormComponent implements OnInit {
       crdbInstallments: ['', [Validators.required, Validators.nullValidator]],
       durationInMonths: ['', [Validators.required, Validators.nullValidator]],
     });
+
+    this.requestIsValid$ = this.store.select(
+      fromStore.getCustomersRequestIsValid
+    );
     // this.loan$ = this.store
     //   .select(fromStore.getCustomerLoan)
     // .pipe(tap((customer) => console.log(customer)));
