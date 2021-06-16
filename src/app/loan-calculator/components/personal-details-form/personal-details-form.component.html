@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div>
-                    <button class="w-100 btn-submit" mat-raised-button color="accent" (click)="calculateLoanDetails()">PIGA HESABU</button>
+                    <button *ngIf="!(requestIsValid$ |  async)" class="w-100 btn-submit" mat-raised-button color="accent" (click)="calculateLoanDetails()">PIGA HESABU</button>
                     
                 </div>
             </div>
