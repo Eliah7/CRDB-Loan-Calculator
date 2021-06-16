@@ -27,14 +27,17 @@ export class LoanFormComponent implements OnInit {
       fromStore.getCustomersRequestIsValid
     );
 
-    this.requestIsValid$.pipe(skip(1)).subscribe((requestStatus) => {
-      console.log(requestStatus);
-      if (!requestStatus) this.openDialog();
-    });
+    // this.requestIsValid$.pipe(skip(1)).subscribe((requestStatus) => {
+    //   console.log(requestStatus);
+    //   if (requestStatus) this.openDialog();
+    // });
   }
 
   openDialog() {
-    const dialogRef = this.dialog.open(ErrorDetailsComponent);
+    const dialogRef = this.dialog.open(ErrorDetailsComponent, {
+      width: '499px',
+      height: '311px',
+    });
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
