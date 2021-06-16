@@ -7,8 +7,8 @@ The CRDB Loan Calculator is a web application that allows CRDB customers to chec
 ## Installation
 
 - Clone this repository
-- Run yarn install or npm install to install the dependencies
-- Run yarn start or npm start to run the app
+- Run `yarn install` or `npm install` to install the dependencies
+- Run `yarn start` or `npm start` to run the app
 
 ## Dependencies
 
