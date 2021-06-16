@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { skip } from 'rxjs/operators';
 
 import * as fromStore from '../../store';
+import { Theme } from '../../store';
 import { ErrorDetailsComponent } from '../error-details/error-details.component';
 
 @Component({
@@ -16,6 +17,7 @@ import { ErrorDetailsComponent } from '../error-details/error-details.component'
 })
 export class LoanFormComponent implements OnInit {
   requestIsValid$: Observable<boolean>;
+  theme$: Observable<boolean>;
 
   constructor(
     private store: Store<fromStore.LoanCalculatorState>,
@@ -26,6 +28,8 @@ export class LoanFormComponent implements OnInit {
     this.requestIsValid$ = this.store.select(
       fromStore.getCustomersRequestIsValid
     );
+
+    this.theme$ = this.store.select(fromStore.getTheme);
 
     // this.requestIsValid$.pipe(skip(1)).subscribe((requestStatus) => {
     //   console.log(requestStatus);

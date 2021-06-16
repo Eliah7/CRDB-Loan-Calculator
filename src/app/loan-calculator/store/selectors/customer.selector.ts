@@ -34,3 +34,8 @@ export const getCustomerLoan = createSelector(
   fromFeature.getLoanCalculatorState,
   (customer) => customer.entities
 );
+
+export const getTheme = createSelector(
+  fromFeature.getLoanCalculatorState,
+  (customer) => customer.theme
+);

@@ -29,6 +29,9 @@ export const customerReducer = createReducer(
   }),
   on(actions.noLoanAvailable, (state: states.CustomerState) => {
     return { ...state, requestIsValid: false };
+  }),
+  on(actions.changeTheme, (state: states.CustomerState, { theme }) => {
+    return { ...state, theme };
   })
 );
 

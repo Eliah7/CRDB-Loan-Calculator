@@ -4,4 +4,5 @@ export enum CustomerActionsEnums {
   REMOVE_ALL_CUSTOMERS = '[Loan Calculator] Remove All Customers',
   NO_LOAN_AVAILABLE = '[Loan Calculator] No Loan Available',
   REQUEST_LOAN_DETAILS_FAIL = '[Loan Calculator] Request Loan Details Fail',
+  CHANGE_THEME = '[Loan Calculator] Change Theme',
 }

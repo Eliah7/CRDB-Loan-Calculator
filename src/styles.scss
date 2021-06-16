@@ -61,3 +61,31 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
 .mat-slider-min-value:not(.mat-slider-thumb-label-showing) .mat-slider-thumb {
   background-color: white;
 }
+
+.lightTheme {
+  $alternate-primary: (
+    100: #fff4f4,
+    500: #fff4f4,
+    700: #fff4f4,
+    contrast: (
+      100: #1a1c1b,
+      500: #1a1c1b,
+      700: #1a1c1b,
+    ),
+  );
+  $alternate-accent: (
+    100: #5ea93d,
+    500: #5ea93d,
+    700: #5ea93d,
+    contrast: (
+      100: #fff4f4,
+      500: #fff4f4,
+      700: #fff4f4,
+    ),
+  );
+  $alternate-primary-palette: mat-palette($alternate-primary);
+  $alternate-accent-palette: mat-palette($alternate-accent);
+
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  @include angular-material-theme($alternate-theme);
+}

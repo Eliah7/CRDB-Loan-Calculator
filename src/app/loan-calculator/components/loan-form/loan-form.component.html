@@ -1,4 +1,4 @@
-<div class="loan-form">
+<div class="loan-form {{(theme$ | async) ? 'lightTheme' : ''}}">
     <app-header></app-header>
     <div class="loan-form-container" *ngIf="requestIsValid$ | async">
         <div class="d-flex align-items-center">
