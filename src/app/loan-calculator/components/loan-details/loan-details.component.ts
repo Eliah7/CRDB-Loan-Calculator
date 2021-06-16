@@ -45,10 +45,12 @@ export class LoanDetailsComponent implements OnInit {
       .pipe(switchMap((val) => of(Object.values(val)[0])));
 
     this.customer$.subscribe((customer) => {
-      // console.log(customer.loan.loanAmount);
-      this.customerDefault = customer;
-      this.monthsValue = customer.loan.durationInMonths;
-      this.loanAmountValue = customer.loan.loanAmount;
+      if (customer) {
+        // console.log(customer);
+        this.customerDefault = customer;
+        this.monthsValue = customer.loan.durationInMonths;
+        this.loanAmountValue = customer.loan.loanAmount;
+      }
     });
     // .pipe(tap((customer) => console.log(customer)));
   }
