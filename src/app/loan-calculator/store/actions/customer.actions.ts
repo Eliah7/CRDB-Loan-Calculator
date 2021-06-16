@@ -25,3 +25,8 @@ export const requestLoanDetailsFail = createAction(
   enums.CustomerActionsEnums.REMOVE_ALL_CUSTOMERS,
   props<{ error: any }>()
 );
+
+export const changeTheme = createAction(
+  enums.CustomerActionsEnums.CHANGE_THEME,
+  props<{ theme: boolean }>()
+);
