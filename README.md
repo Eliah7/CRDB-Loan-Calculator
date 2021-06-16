@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The CRDB Loan Calculator is a web application that allows CRDB customers to check given their credit score, which is calculated from their net pay, gross salary and total crdb collections from other loans.
+The CRDB Loan Calculator is a web application that allows CRDB customers to check given their credit score, which is calculated from their net pay, gross salary and total crdb collections from other loans, what amount of loan they can receive from CRDB.
 
 ## Installation
 
